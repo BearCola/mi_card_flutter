@@ -5,31 +5,23 @@ void main() {
     MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: Center(
-          child: SafeArea(
-              child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        body: SafeArea(
+          child: Column(
             children: <Widget>[
-              Container(
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.red,
-                child: Text('Container 1'),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage("images/photo.png"),
               ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                color: Colors.yellow,
-                child: Text('Container 2'),
-              ),
-              Container(
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.blue,
-                child: Text('Container 3'),
+              Text(
+                "Angela Yu",
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 40.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
               )
             ],
-          )),
+          ),
         ),
       ),
     ),
